@@ -1,0 +1,7 @@
+services:
+  vless-client:
+    build: .
+    env_file: .env
+    ports:
+      - "${SOCKS_PORT:-1080}:${SOCKS_PORT:-1080}"
+    restart: unless-stopped

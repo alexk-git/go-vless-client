@@ -1,10 +1,11 @@
-BINARY=build
+BINARY=build/go-vless-client
 
 build:
-    go build -o $(BINARY) .
+	mkdir -p build
+	go build -o $(BINARY) .
 
 run: build
-    ./$(BINARY) $(ARGS)
+	./$(BINARY) $(ARGS)
 
 clean:
-    rm -f $(BINARY)
+	rm -rf build

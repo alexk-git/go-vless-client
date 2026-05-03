@@ -84,7 +84,7 @@ func buildJSON(params *VlessParams, socksPort int) string {
     {
       "tag": "socks-in",
       "port": %d,
-      "listen": "127.0.0.1",
+      "listen": "0.0.0.0",
       "protocol": "socks",
       "settings": {
         "udp": true
